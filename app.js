@@ -31,6 +31,8 @@ function actualizarLista(){
     }
     //Construccion final de la lista
     lista.innerHTML=contenidoLista;
+    //Esto es un extra mio para que si se agrega alguien mas se limpie el resultado si ya se habia realizado
+    document.getElementById('resultado').innerHTML='';
 }
 
 //Funcion para seleccionar de manera aleatoria un nombre en la lista por medio de un indice
