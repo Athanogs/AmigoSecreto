@@ -32,3 +32,16 @@ function actualizarLista(){
     //Construccion final de la lista
     lista.innerHTML=contenidoLista;
 }
+
+//Funcion para seleccionar de manera aleatoria un nombre en la lista por medio de un indice
+function sortearAmigo(){
+    if(amigos.length==0){
+        //En caso de estar vacia la lista de amigos
+        alert("Aun no se han ingresado nombres");
+    }else{
+        //En caso de si tener nombres previamente ingresados
+        let indice=Math.floor(Math.random()*amigos.length);
+        //Impresion del Resultado
+        document.getElementById('resultado').innerHTML=amigos[indice];
+    }
+}
