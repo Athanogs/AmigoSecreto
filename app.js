@@ -17,3 +17,18 @@ function agregarAmigo(){
     document.getElementById('amigo').value='';
     actualizarLista();
 }
+
+//Funcion que recorre el array amigos, y agrega cada nombre como un elemento <li>
+function actualizarLista(){
+    lista=document.getElementById('listaAmigos');
+    //Contenido inicia vacio
+    contenidoLista='';
+    //Limpiado de lista existente
+    lista.innerHTML=contenidoLista;
+    //Iteracion en cada nombre en la lista
+    for (let i=0; i<amigos.length;i++){
+        contenidoLista+= `<li>${amigos[i]}</li>`;
+    }
+    //Construccion final de la lista
+    lista.innerHTML=contenidoLista;
+}
